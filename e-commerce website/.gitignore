@@ -1,0 +1,8 @@
+node_modules/
+.vercel/
+.env
+.env.local
+public/
+api/catalogue.json
+homepage/data/*.db
+login-page/data/

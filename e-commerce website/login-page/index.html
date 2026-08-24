@@ -1,0 +1,52 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiln - Sign In</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="tabs">
+            <button id="loginTab" class="active" type="button" onclick="showLogin()">Sign In</button>
+            <button id="signupTab" type="button" onclick="showSignup()">Create Account</button>
+        </div>
+
+        <div class="form-switcher">
+        <form id="loginForm" class="auth-form active">
+            <h1>Welcome back</h1>
+            <p class="subtitle">Good to see you again — your shelf missed you.</p>
+            <label for="loginEmail">EMAIL</label>
+            <input id="loginEmail" type="email" name="email" placeholder="you@example.com" autocomplete="email" required>
+            <label for="loginPassword">PASSWORD</label>
+            <div class="password-field"><input id="loginPassword" type="password" name="password" placeholder="••••••••" autocomplete="current-password" required><button class="password-toggle" type="button" aria-controls="loginPassword" aria-pressed="false">Show</button></div>
+            <div class="options">
+                <label class="remember"><input type="checkbox"> Remember me</label>
+                <a href="#">Forgot password?</a>
+            </div>
+            <button class="signin" type="submit">Sign in to Kiln</button>
+            <p class="form-message" id="loginMessage" aria-live="polite"></p>
+            <div class="or">OR CONTINUE WITH</div>
+            <div class="social"><button type="button">G &nbsp; Google</button><button type="button">● &nbsp; Apple</button></div>
+            <p class="signup">New to Kiln? <a href="#" onclick="showSignup(event)">Create an account</a></p>
+        </form>
+
+        <form id="signupForm" class="auth-form" inert>
+            <h1>Create account</h1>
+            <p class="subtitle">Join Kiln and start your journey.</p>
+            <label for="signupName">NAME</label>
+            <input id="signupName" type="text" name="name" placeholder="Your name" autocomplete="name" minlength="2" maxlength="100" required>
+            <label for="signupEmail">EMAIL</label>
+            <input id="signupEmail" type="email" name="email" placeholder="you@example.com" autocomplete="email" required>
+            <label for="signupPassword">PASSWORD</label>
+            <div class="password-field"><input id="signupPassword" type="password" name="password" placeholder="Create a password" autocomplete="new-password" minlength="8" required><button class="password-toggle" type="button" aria-controls="signupPassword" aria-pressed="false">Show</button></div>
+            <button class="signin" type="submit">Create Account</button>
+            <p class="form-message" id="signupMessage" aria-live="polite"></p>
+            <p class="signup">Already have an account? <a href="#" onclick="showLogin(event)">Sign in</a></p>
+        </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+{
+  "cleanUrls": true,
+  "rewrites": [
+    { "source": "/login", "destination": "/login/index.html" },
+    { "source": "/login/:path*", "destination": "/login/:path*" }
+  ]
+}
